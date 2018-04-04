@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="BattlebotServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BattlebotServer_jar</output-path>
+    <root id="archive" name="BattlebotServer.jar">
+      <element id="module-output" name="BattlebotServer" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/bluecove-gpl-2.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/java-json.jar (2)/java-json.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/bluecove-2.1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
