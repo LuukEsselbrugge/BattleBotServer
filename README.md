@@ -2,17 +2,34 @@
 De Battlebot Java server
 
 # Front End
-Poort voor TCP verbinding PHP 1337. De commando's kunnen met behulp van de PHP wrapper of eigen TCP socket implementatie worden verstuurd.
+Poort voor TCP verbinding PHP 1337. De commando's kunnen met behulp van de PHP wrapper (in folder PHPExample)
 
-# Commando Beschrijving Front End 
-    getConnectedBots Geeft een JSON array met alle verbonden bots (BotMACAdrr’s)
-    BotMac,1000000 Vooruit
-    BotMac,0100000 Achteruit
-    BotMac,0010000 Links
-    BotMac,0001000 Rechts
-    BotMac,0000100 Autonoom rijden
-    BotMac,0000010 Commando voor eigen gebruik
-    BotMac,0000001 Commando voor eigen gebruik
+# Voorbeeld PHP Front End
+    <?php
+    //Battlebot example code PHP
+    require_once "BattleBot.php";
+
+    $botList = new BattleBotList();
+    $botArray = $botList->getList();
+    var_dump($botArray);
+
+    $battleBot = new BattleBot($botArray[0]);
+    $error = $battleBot->sendBotCommand(BOT_FORWARD);
+    $error = $battleBot->sendBotCommand(BOT_LEFT);
+    $error = $battleBot->sendBotCommand(BOT_STOP);
+
+    echo $error;
+
+    ?>
+# Commando's Front End
+    BOT_FORWARD
+    BOT_BACKWARD
+    BOT_LEFT
+    BOT_RIGHT
+    BOT_AUTO
+    BOT_CUSTOM1
+    BOT_CUSTOM2
+    BOT_STOP
 
 # Commando's Server
     add <MAC> - Add a Battleboi to the list
