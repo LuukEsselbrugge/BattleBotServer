@@ -2,7 +2,7 @@
 De Battlebot Java server
 
 # Front End
-Poort voor TCP verbinding PHP 1337. De commando's kunnen met behulp van de PHP wrapper (in folder PHPExample)
+De commando's kunnen met behulp van de PHP wrapper (in folder PHPExample) worden verzonden
 
 # Voorbeeld PHP Front End
     <?php
